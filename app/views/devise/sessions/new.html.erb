@@ -1,26 +1,54 @@
-<h2>Log in</h2>
-
+<div id="preloader">
+  <div class="loader"></div>
+</div>
+<!-- preloader area end -->
+<!-- login area start -->
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+  <div class="login-area login-s2">
+    <div class="container">
+      <div class="login-box ptb--100">
+        <form>
+          <div class="login-form-head">
+            <h4>Sign In</h4>
+            <p>Hello there, Sign in and start managing your Admin Template</p>
+          </div>
+          <div class="login-form-body">
+            <div class="form-gp">
+              <label for="exampleInputEmail1">Email address</label>
+              <%= f.email_field :email, autofocus: true, id: 'exampleInputEmail1', autocomplete: 'off' %>
+              <i class="ti-email"></i>
+            </div>
+            <div class="form-gp">
+              <%= f.label :password, for: 'exampleInputPassword1' %>
+              <%= f.password_field :password, autocomplete: "current-password", id: 'exampleInputPassword1' %>
+              <i class="ti-lock"></i>
+            </div>
+            <div class="row mb-4 rmber-area">
+              <div class="col-6">
+                <div class="custom-control custom-checkbox mr-sm-2">
+                  <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                  <label class="custom-control-label" for="customControlAutosizing">Remember Me</label>
+                </div>
+              </div>
+              <div class="col-6 text-right">
+                <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+                <% end %>
+              </div>
+            </div>
+            <div class="submit-btn-area">
+              <%= f.submit "Log in", id: 'form_submit', class: 'ti-arrow-right' %>
+            </div>
+            <div class="form-footer text-center mt-5">
+              <p class="text-muted">Don't have an account? 
+                <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+                  <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+                <% end %>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
