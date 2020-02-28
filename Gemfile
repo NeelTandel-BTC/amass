@@ -29,6 +29,8 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'bootstrap', '~> 4.4', '>= 4.4.1'
 # font-awesome-rails provides the Font-Awesome web fonts and stylesheets as a Rails engine for use with the asset pipeline.
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+# Very simple Roles library without any authorization enforcement supporting scope on resource objects
+gem 'rolify', '~> 5.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
