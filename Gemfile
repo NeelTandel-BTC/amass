@@ -27,6 +27,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise', '~> 4.7', '>= 4.7.1'
 # The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web
 gem 'bootstrap', '~> 4.4', '>= 4.4.1'
+# font-awesome-rails provides the Font-Awesome web fonts and stylesheets as a Rails engine for use with the asset pipeline.
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
