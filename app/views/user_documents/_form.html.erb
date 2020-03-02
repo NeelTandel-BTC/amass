@@ -1,0 +1,31 @@
+<%= form_with(model: user_document, local: true) do |form| %>
+  <% if user_document.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_document.errors.count, "error") %> prohibited this user_document from being saved:</h2>
+
+      <ul>
+        <% user_document.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<div class="field">
+		<%= form.label :upload_file %>
+  	<%= form.file_field :file %>
+	</div>
+	
+	<% if !form.object.new_record? %>
+    <%= file_text = user_document.file.read %>
+   
+    <div class="field">
+      <iframe src = user_document.file.path >
+      </iframe>
+		</div>
+	<% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
