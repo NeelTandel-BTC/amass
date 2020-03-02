@@ -31,6 +31,7 @@ gem 'bootstrap', '~> 4.4', '>= 4.4.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 # Very simple Roles library without any authorization enforcement supporting scope on resource objects
 gem 'rolify', '~> 5.2'
+gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

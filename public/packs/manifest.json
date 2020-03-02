@@ -33,6 +33,14 @@
       "js.map": [
         "/packs/js/sessions-b407a5a03e14eba23e06.js.map"
       ]
+    },
+    "user_documents": {
+      "js": [
+        "/packs/js/user_documents-1b282c289ebb99ef61d3.js"
+      ],
+      "js.map": [
+        "/packs/js/user_documents-1b282c289ebb99ef61d3.js.map"
+      ]
     }
   },
   "home.js": "/packs/js/home-e44339787cb7a6c89de1.js",
@@ -40,5 +48,7 @@
   "registrations.js": "/packs/js/registrations-c534f0a75ecc9d6296b7.js",
   "registrations.js.map": "/packs/js/registrations-c534f0a75ecc9d6296b7.js.map",
   "sessions.js": "/packs/js/sessions-b407a5a03e14eba23e06.js",
-  "sessions.js.map": "/packs/js/sessions-b407a5a03e14eba23e06.js.map"
+  "sessions.js.map": "/packs/js/sessions-b407a5a03e14eba23e06.js.map",
+  "user_documents.js": "/packs/js/user_documents-1b282c289ebb99ef61d3.js",
+  "user_documents.js.map": "/packs/js/user_documents-1b282c289ebb99ef61d3.js.map"
 }
