@@ -1,0 +1,9 @@
+//= require jquery
+//= require jquery_ujs
+//= require jquery.validate
+//= require sessions/owl.carousel.min
+//= require sessions/metisMenu.min
+//= require sessions/jquery.slimscroll.min
+//= require sessions/jquery.slicknav.min
+//= require sessions/plugins
+//= require sessions/scripts

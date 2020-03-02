@@ -1,4 +1,4 @@
-debugger;
+
 (function($) {
     "use strict";
 
@@ -6,8 +6,8 @@ debugger;
     Preloader
     ==================================*/
 
-    var preloader = $('#preloader');
     $(window).on('load', function() {
+        var preloader = $('#preloader');
         preloader.fadeOut('slow', function() { $(this).remove(); });
     });
 

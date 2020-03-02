@@ -1,10 +1,12 @@
-
+<div id="preloader">
+  <div class="loader"></div>
+</div>
 <!-- preloader area end -->
 <!-- login area start -->
 <div class="login-area">
   <div class="container">
     <div class="login-box ptb--100">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { id: 'signin_form' }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
         <div class="login-form-head">
           <h4>Sign In</h4>
@@ -13,7 +15,7 @@
         <div class="login-form-body">
           <div class="form-gp">
             <label for="exampleInputEmail1">Email address</label>
-            <%= f.email_field :email, id: 'exampleInputEmail1', autocomplete: 'off' %>
+            <%= f.text_field :email, id: 'exampleInputEmail1', autocomplete: 'off' %>
             <i class="ti-email"></i>
           </div>
           <div class="form-gp">
