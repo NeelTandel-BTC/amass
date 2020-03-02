@@ -20,25 +20,25 @@
     },
     "registrations": {
       "js": [
-        "/packs/js/registrations-c534f0a75ecc9d6296b7.js"
+        "/packs/js/registrations-60193601cfc54e3a9a98.js"
       ],
       "js.map": [
-        "/packs/js/registrations-c534f0a75ecc9d6296b7.js.map"
+        "/packs/js/registrations-60193601cfc54e3a9a98.js.map"
       ]
     },
     "sessions": {
       "js": [
-        "/packs/js/sessions-b407a5a03e14eba23e06.js"
+        "/packs/js/sessions-3524e89cc0382d3fac22.js"
       ],
       "js.map": [
-        "/packs/js/sessions-b407a5a03e14eba23e06.js.map"
+        "/packs/js/sessions-3524e89cc0382d3fac22.js.map"
       ]
     }
   },
   "home.js": "/packs/js/home-e44339787cb7a6c89de1.js",
   "home.js.map": "/packs/js/home-e44339787cb7a6c89de1.js.map",
-  "registrations.js": "/packs/js/registrations-c534f0a75ecc9d6296b7.js",
-  "registrations.js.map": "/packs/js/registrations-c534f0a75ecc9d6296b7.js.map",
-  "sessions.js": "/packs/js/sessions-b407a5a03e14eba23e06.js",
-  "sessions.js.map": "/packs/js/sessions-b407a5a03e14eba23e06.js.map"
+  "registrations.js": "/packs/js/registrations-60193601cfc54e3a9a98.js",
+  "registrations.js.map": "/packs/js/registrations-60193601cfc54e3a9a98.js.map",
+  "sessions.js": "/packs/js/sessions-3524e89cc0382d3fac22.js",
+  "sessions.js.map": "/packs/js/sessions-3524e89cc0382d3fac22.js.map"
 }

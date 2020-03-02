@@ -6,8 +6,15 @@ require("@rails/ujs").start();
 require("turbolinks").start();
 require("channels");
 require('jquery');
-
 global.$ = jQuery;
+import 'modernizr';
+import 'bootstrap';
+require('sessions/owl.carousel.min');
+require('sessions/metisMenu.min');
+require('sessions/jquery.slimscroll.min');
+require('sessions/jquery.slicknav.min');
+require('sessions/plugins');
+require('sessions/scripts');
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
