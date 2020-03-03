@@ -20,25 +20,25 @@
     },
     "registrations": {
       "js": [
-        "/packs/js/registrations-60193601cfc54e3a9a98.js"
+        "/packs/js/registrations-6709ae360eeede823cd0.js"
       ],
       "js.map": [
-        "/packs/js/registrations-60193601cfc54e3a9a98.js.map"
+        "/packs/js/registrations-6709ae360eeede823cd0.js.map"
       ]
     },
     "sessions": {
       "js": [
-        "/packs/js/sessions-3524e89cc0382d3fac22.js"
+        "/packs/js/sessions-53b83c2f0c5fe290d83d.js"
       ],
       "js.map": [
-        "/packs/js/sessions-3524e89cc0382d3fac22.js.map"
+        "/packs/js/sessions-53b83c2f0c5fe290d83d.js.map"
       ]
     }
   },
   "home.js": "/packs/js/home-e44339787cb7a6c89de1.js",
   "home.js.map": "/packs/js/home-e44339787cb7a6c89de1.js.map",
-  "registrations.js": "/packs/js/registrations-60193601cfc54e3a9a98.js",
-  "registrations.js.map": "/packs/js/registrations-60193601cfc54e3a9a98.js.map",
-  "sessions.js": "/packs/js/sessions-3524e89cc0382d3fac22.js",
-  "sessions.js.map": "/packs/js/sessions-3524e89cc0382d3fac22.js.map"
+  "registrations.js": "/packs/js/registrations-6709ae360eeede823cd0.js",
+  "registrations.js.map": "/packs/js/registrations-6709ae360eeede823cd0.js.map",
+  "sessions.js": "/packs/js/sessions-53b83c2f0c5fe290d83d.js",
+  "sessions.js.map": "/packs/js/sessions-53b83c2f0c5fe290d83d.js.map"
 }

@@ -15,7 +15,7 @@
         <div class="login-form-body">
           <div class="form-gp">
             <label for="exampleInputEmail1">Email address</label>
-            <%= f.text_field :email, id: 'exampleInputEmail1', autocomplete: 'off' %>
+            <%= f.email_field :email, id: 'exampleInputEmail1', autocomplete: 'off' %>
             <i class="ti-email"></i>
           </div>
           <div class="form-gp">
@@ -41,3 +41,11 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).on('turbolinks:load', function (e) {
+    if ($('.form-gp input')[0].value.length > 0) {
+      $(this).parent('.form-gp').addClass('focused');
+    }
+  });
+</script>

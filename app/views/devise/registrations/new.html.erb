@@ -2,8 +2,7 @@
 <div class="login-area">
   <div class="container">
     <div class="login-box ptb--100">
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { id: 'registration-form' }) do |f| %>
         <div class="login-form-head">
           <h4>Sign up</h4>
           <p>Hello there, Sign up and Join with Us</p>
@@ -11,18 +10,21 @@
 
         <div class="login-form-body">
           <div class="form-gp">
-            <%= f.label :email %><br />
+            <%= f.label :email %>
             <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
             <i class="ti-email"></i>
+            <span class="is-invalid text-danger">
+              <%= server_validations('email') %>
+            </span>
           </div>
 
           <div class="form-gp">
             <%= f.label :password %>
-            <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-            <% end %><br />
             <%= f.password_field :password, autocomplete: "new-password" %>
             <i class="ti-lock"></i>
+            <span class="is-invalid text-danger">
+              <%= server_validations('password') %>
+            </span>
           </div>
 
           <div class="form-gp">
@@ -32,9 +34,12 @@
           </div>
 
           <div class="submit-btn-area">
-            <%= f.submit "Sign up" %>
             <button id="form_submit" type="submit">Submit <i class="ti-arrow-right"></i></button>
           </div>
       <% end %>
-
-      <%= render "devise/shared/links" %>
+      <div class="form-footer text-center mt-5">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

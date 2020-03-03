@@ -1,17 +1,49 @@
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
-// that code so it'll be compiled.
-// require("@rails/ujs").start();
-require("turbolinks").start();
-require("channels");
-require('jquery');
-require('packs/sessions');
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require jquery.validate
+//= require bootstrap.min.js
+//= require sessions/owl.carousel.min
+//= require sessions/metisMenu.min
+//= require sessions/jquery.slimscroll.min
+//= require sessions/jquery.slicknav.min
+//= require sessions/plugins
+//= require sessions/scripts
 
-global.$ = jQuery;
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
+$(document).on('turbolinks:load', function (e) {
+  var requiredRule = {
+    required: true
+  };
+
+  var confirmRules = {
+    required: true,
+    equalTo: '#user_password'
+  };
+ 
+  $('#registration-form').validate({
+    errorElement: 'div',
+    errorClass: 'is-invalid text-danger',
+    rules: {
+      "user[email]": {
+        required: requiredRule,
+      },
+      "user[password]": {
+        required: requiredRule,
+      },
+      "user[password_confirmation]": confirmRules
+    },
+
+    messages: {
+      "user[email]": {
+        required: "Please enter email.",
+      },
+      'user[password]': {
+        required: 'Please enter password.',
+      },
+      'user[password_confirmation]': {
+        required: 'Please enter confirmation password.',
+        equalTo: 'Please enter the same password.'
+      }
+      },
+  });
+});
