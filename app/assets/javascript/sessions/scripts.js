@@ -17,14 +17,14 @@
 				$(this).parent('.form-gp').removeClass('focused');
 			}
 		});
+		$('.nav-btn').on('click', function () {
+			$('.page-container').toggleClass('sbar_collapsed');
+		});	
 	});
 
 	/*================================
 	sidebar collapsing
 	==================================*/
-	$('.nav-btn').on('click', function () {
-		$('.page-container').toggleClass('sbar_collapsed');
-	});
 
 	/*================================
 	Start Footer resizer
