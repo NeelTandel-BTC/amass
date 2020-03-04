@@ -15,7 +15,9 @@ class User
   field :reset_password_sent_at, type: Time
 
   has_and_belongs_to_many :roles
+
   def assign_default_role
+    binding.pry
     add_role(:admin)
   end
 end

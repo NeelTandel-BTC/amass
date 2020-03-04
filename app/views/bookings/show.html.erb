@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>File name:</strong>
+  <%= @booking.file_name %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= number_to_human_size(@booking.document_file.size) %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @booking.status %>
+</p>
+
+<p>
+  <strong>Document file name</strong>
+  <%= @booking.document_file.path %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>
