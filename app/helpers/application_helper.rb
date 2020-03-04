@@ -1,6 +1,9 @@
-module ApplicationHelper
+# frozen_string_literal: true
 
+module ApplicationHelper
   def server_validations(field)
-    "#{field.humanize} " + resource.errors[field].first if resource.errors[field].present?
+    return if resource.errors[field].blank?
+
+    "#{field.humanize} " + resource.errors[field].first
   end
 end

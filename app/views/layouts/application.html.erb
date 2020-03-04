@@ -10,7 +10,9 @@
   </head>
 
   <body>
-    <%= render 'shared/left_panel' %>
+    <% if controller_name != 'sessions' %>
+      <%= render 'shared/left_panel' %>
+    <% end %>
     <div class="main-content">
       <%= yield %>
       <%= render 'shared/footer' %>
