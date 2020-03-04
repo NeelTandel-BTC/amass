@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 # Home controller
-class HomeController < ApplicationController
+class DashboardController < ApplicationController
   def index; end
 end

@@ -3,5 +3,3 @@
 //= require turbolinks
 //= require jquery.validate
 //= require bootstrap.min.js
-//= require custom
-//= require sessions/common

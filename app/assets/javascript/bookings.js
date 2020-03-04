@@ -3,9 +3,4 @@
 //= require turbolinks
 //= require jquery.validate
 //= require bootstrap.min.js
-//= require sessions/owl.carousel.min
-//= require sessions/metisMenu.min
-//= require sessions/jquery.slimscroll.min
-//= require sessions/jquery.slicknav.min
-//= require sessions/plugins
-//= require sessions/scripts
+

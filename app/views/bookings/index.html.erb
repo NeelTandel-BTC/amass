@@ -1,31 +1,47 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Bookings</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>File name</th>
-      <th>Size</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bookings.each do |booking| %>
-      <tr>
-        <td><%= booking.file_name %></td>
-        <td><%= booking.size %></td>
-        <td><%= booking.status %></td>
-        <td><%= link_to 'Show', booking %></td>
-        <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-        <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Booking', new_booking_path %>
+<div class="main-content-inner">
+  <div class="row">
+    <!-- table primary start -->
+    <div class="col-lg-6 mt-5">
+    <div class="card">
+        <div class="card-body">
+          <h4 class="header-title">Bookings</h4>
+          <div class="single-table">
+            <div class="table-responsive">
+              <table class="table text-center">
+                <thead class="text-uppercase bg-primary">
+                  <tr class="text-white">
+                    <th scope="col">File name</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <% @bookings.each do |booking| %>
+                  <tr>
+                    <td><%= booking.file_name %></td>
+                    <td><%= booking.size %></td>
+                    <td><%= booking.status %></td>
+                    <td><%= booking.created_at %></td>
+                    <td>
+                      <%= link_to  booking_path(booking) do %>
+                        <i class='ti-eye' data-placement="bottom" title='Show'></i>
+                      <% end %>
+                      <%= link_to  edit_booking_path(booking) do %>
+                        <i class='ti-pencil' data-placement="bottom" title='Edit'></i>
+                      <% end %>
+                      <%= link_to booking_path(booking), method: :delete, data: { confirm: t('confirmation') } do %>
+                        <i class='ti-trash' data-placement="bottom" title='Delete'></i>
+                      <% end %>
+                    </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

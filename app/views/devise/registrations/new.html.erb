@@ -9,25 +9,25 @@
         </div>
 
         <div class="login-form-body">
-          <div class="form-gp">
+          <div class="form-gp focused">
             <%= f.label :email %>
-            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'email_validate' %>
             <i class="ti-email"></i>
-            <span class="is-invalid text-danger">
+            <span class="is-invalid text-danger email_validation">
               <%= server_validations('email') %>
             </span>
           </div>
 
-          <div class="form-gp">
+          <div class="form-gp focused">
             <%= f.label :password %>
-            <%= f.password_field :password, autocomplete: "new-password" %>
+            <%= f.password_field :password, autocomplete: "new-password" , class: 'pwd_validate'%>
             <i class="ti-lock"></i>
-            <span class="is-invalid text-danger">
+            <span class="is-invalid text-danger pwd_validation">
               <%= server_validations('password') %>
             </span>
           </div>
 
-          <div class="form-gp">
+          <div class="form-gp focused">
             <%= f.label :password_confirmation %><br />
             <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
             <i class="ti-lock"></i>
@@ -43,3 +43,4 @@
     </div>
   </div>
 </div>
+

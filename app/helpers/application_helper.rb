@@ -6,4 +6,8 @@ module ApplicationHelper
 
     "#{field.humanize} " + resource.errors[field].first
   end
+
+  def test(controller_name)
+    controller_name != 'sessions' && controller_name != 'registrations'
+  end
 end

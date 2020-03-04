@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit, :update, :destroy]
+  before_action :set_booking, only: %i[show edit update destroy]
 
   # GET /bookings
   # GET /bookings.json
@@ -9,8 +11,7 @@ class BookingsController < ApplicationController
 
   # GET /bookings/1
   # GET /bookings/1.json
-  def show
-  end
+  def show; end
 
   # GET /bookings/new
   def new
@@ -18,8 +19,7 @@ class BookingsController < ApplicationController
   end
 
   # GET /bookings/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /bookings
   # POST /bookings.json
@@ -63,13 +63,14 @@ class BookingsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_booking
-      @booking = Booking.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def booking_params
-      params.require(:booking).permit(:file_name, :size, :status, :document_file)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def booking_params
+    params.require(:booking).permit(:file_name, :size, :status, :document_file)
+  end
 end
